@@ -136,8 +136,6 @@ that rely on **check_ganglia_metric**:
     max_check_attempts   1
   }
 
-::
-
 And finally, we set up the actual service dependency. Note that I've enabled
 **use_regexp_matching** in Nagios, which allows me to use regular expressions
 in my directives. By sticking "- Ganglia" at the end of every service that
