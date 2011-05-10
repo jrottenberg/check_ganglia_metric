@@ -36,15 +36,9 @@ import tempfile
 import time
 from xml.etree.cElementTree import XML
 
-try:
-    from NagAconda import Plugin
-except ImportError, e:
-    print('%s (Hint: "pip install NagAconda" or "easy_install NagAconda")' % e)
-    sys.exit(2)
-
 
 __app_name__ = 'check_ganglia_metric'
-__version_info__ = ('2011', '05', '03')
+__version_info__ = ('2011', '05', '10')
 __version__ = '.'.join(__version_info__)
 __author__ = 'Michael T. Conigliaro'
 __author_email__ = 'mike [at] conigliaro [dot] org'
@@ -319,6 +313,12 @@ class GangliaMetrics(object):
 
 
 if __name__ == '__main__':
+
+    try:
+        from NagAconda import Plugin
+    except ImportError, e:
+        print('%s (Hint: "pip install NagAconda" or "easy_install NagAconda")' % e)
+        sys.exit(2)
 
     # Initialize plugin
     plugin = Plugin("Ganglia metric check plugin for Nagios", __version__)

@@ -3,8 +3,8 @@
 
 import os
 
-import distribute_setup
-distribute_setup.use_setuptools()
+from distribute_setup import use_setuptools
+use_setuptools()
 from setuptools import setup, find_packages
 
 import check_ganglia_metric
