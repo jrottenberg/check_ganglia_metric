@@ -12,29 +12,18 @@ by `Vladimir Vuksan <http://vuksan.com>`_'s check_ganglia_metric.php, but it
 comes with a number of improvements.
 
 
-Requirements
+Installation
 ------------
 
-#. Python >= 2.6
-#. `NagAconda <http://pypi.python.org/pypi/NagAconda>`_ >= 0.1.4
-
-To check which version of Python you have:
-
 ::
 
-  python -V
-
-To install NagAconda:
-
-::
-
-  pip install NagAconda
+  # pip install check_ganglia_metric
 
 ...or:
 
 ::
 
-  easy_install NagAconda
+  # easy_install check_ganglia_metric
 
 
 
