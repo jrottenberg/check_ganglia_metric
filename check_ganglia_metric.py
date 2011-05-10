@@ -38,10 +38,10 @@ from xml.etree.cElementTree import XML
 
 
 __app_name__ = 'check_ganglia_metric'
-__version_info__ = ('2011', '05', '10')
-__version__ = '.'.join(__version_info__)
+__version__ = '2011.05.10a'
 __author__ = 'Michael T. Conigliaro'
 __author_email__ = 'mike [at] conigliaro [dot] org'
+__description__ = 'Ganglia metric check plugin for Nagios'
 __url__ = 'http://github.com/mconigliaro/check_ganglia_metric'
 
 
@@ -321,7 +321,7 @@ if __name__ == '__main__':
         sys.exit(2)
 
     # Initialize plugin
-    plugin = Plugin("Ganglia metric check plugin for Nagios", __version__)
+    plugin = Plugin(__description__, __version__)
     cache_path = os.path.join(os.path.expanduser('~'), '.check_ganglia_metric.cache')
     plugin.add_option('d', 'gmetad_host',
                       'Ganglia meta daemon host (default: localhost)',

@@ -5,16 +5,10 @@ import os
 
 from distribute_setup import use_setuptools
 use_setuptools()
-from setuptools import setup, find_packages
+from setuptools import setup
 
 import check_ganglia_metric
 
-
-def read(file):
-    with open(os.path.abspath(os.path.join(os.path.dirname(__file__), file))) as f:
-        result = f.read()
-    f.closed
-    return result
 
 setup(
     name = check_ganglia_metric.__app_name__.lower(),
@@ -22,8 +16,9 @@ setup(
 
     author = check_ganglia_metric.__author__,
     author_email = check_ganglia_metric.__author_email__,
-    description = 'Ganglia metric check plugin for Nagios',
-    long_description = read('README.rst'),
+    description = check_ganglia_metric.__description__,
+    long_description = open(os.path.abspath(os.path.join(
+                            os.path.dirname(__file__), 'README.rst'))).read(),
     url = check_ganglia_metric.__url__,
 
     keywords = 'nagios ganglia monitoring',
@@ -39,9 +34,7 @@ setup(
         "Topic :: System :: Monitoring"
     ],
 
-    install_requires = ['setuptools', 'NagAconda'],
+    install_requires = ['NagAconda'],
 
-    packages = find_packages(),
-    scripts = ['check_ganglia_metric.py'],
-    include_package_data = True
+    scripts = ['check_ganglia_metric.py']
 )
