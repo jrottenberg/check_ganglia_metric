@@ -66,7 +66,7 @@ Meta Daemon:
 
 ::
 
-  $ check_ganglia_metric --gmetad_host=gmetad-server.example.com \
+  $ check_ganglia_metric.py --gmetad_host=gmetad-server.example.com \
     --metric_host=host.example.com --metric_name=cpu_idle
   Status Ok, CPU Idle = 99.3 %|cpu_idle=99.3%;;;;
 
@@ -79,7 +79,7 @@ Now let's try setting an alert threshold:
 
 ::
 
-  $ check_ganglia_metric --gmetad_host=gmetad-server.example.com \
+  $ check_ganglia_metric.py --gmetad_host=gmetad-server.example.com \
     --metric_host=host.example.com --metric_name=cpu_idle --critical=99
   Status Critical, CPU Idle = 99.6 %|cpu_idle=99.6%;;99;;
 
@@ -102,7 +102,7 @@ First, create a command definition:
 
   define command {
     command_name  check_ganglia_metric
-    command_line  /usr/lib/nagios/plugins/check_ganglia_metric --gmetad_host=gmetad-server.example.com --metric_host=$HOSTADDRESS$ --metric_name=$ARG1$ --warning=$ARG2$ --critical=$ARG3$
+    command_line  /usr/bin/check_ganglia_metric.py --gmetad_host=gmetad-server.example.com --metric_host=$HOSTADDRESS$ --metric_name=$ARG1$ --warning=$ARG2$ --critical=$ARG3$
   }
 
 Now you can use the above command in your service definitions:
@@ -187,7 +187,7 @@ with a "host/metric not found" error, but not before it dumps its cache:
 
 ::
 
-  $ check_ganglia_metric --gmetad_host=gmetad-server.example.com \
+  $ check_ganglia_metric.py --gmetad_host=gmetad-server.example.com \
     --metric_host=dummy --metric_name=dummy -vv
 
 

@@ -43,7 +43,12 @@ except ImportError, e:
     sys.exit(2)
 
 
-__version__ = '2011.05.03'
+__app_name__ = 'check_ganglia_metric'
+__version_info__ = ('2011', '05', '03')
+__version__ = '.'.join(__version_info__)
+__author__ = 'Michael T. Conigliaro'
+__author_email__ = 'mike [at] conigliaro [dot] org'
+__url__ = 'http://github.com/mconigliaro/check_ganglia_metric'
 
 
 class GangliaMetrics(object):
