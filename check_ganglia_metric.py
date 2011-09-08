@@ -214,6 +214,7 @@ class GangliaMetrics(object):
                 for metric in host.findall('METRIC'):
                     metric_name = metric.get('NAME')
                     metrics[host_name][metric_name] = {
+                        'title': metric_name,
                         'units': metric.get('UNITS'),
                         'value': metric.get('VAL')
                     }
