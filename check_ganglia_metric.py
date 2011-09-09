@@ -3,7 +3,7 @@
 #
 # Ganglia metric check plugin for Nagios
 #
-# Copyright (C) 2011 by Michael T. Conigliaro <mike [at] conigliaro [dot] org>.
+# Copyright (C) 2011 by Michael Paul Thomas Conigliaro <mike [at] conigliaro [dot] org>.
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,12 +37,12 @@ import time
 from xml.etree.cElementTree import XML
 
 
-__app_name__ = 'check_ganglia_metric'
-__version__ = '2011.05.10a'
-__author__ = 'Michael T. Conigliaro'
+__app_name__     = 'check_ganglia_metric'
+__version__      = '2011.09.09'
+__author__       = 'Michael Paul Thomas Conigliaro'
 __author_email__ = 'mike [at] conigliaro [dot] org'
-__description__ = 'Ganglia metric check plugin for Nagios'
-__url__ = 'http://github.com/mconigliaro/check_ganglia_metric'
+__description__  = 'Ganglia metric check plugin for Nagios'
+__url__          = 'http://github.com/mconigliaro/check_ganglia_metric'
 
 
 class GangliaMetrics(object):

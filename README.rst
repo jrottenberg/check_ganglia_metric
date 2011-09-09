@@ -74,9 +74,9 @@ Now let's try setting an alert threshold:
 
 We told **check_ganglia_metric** to return a "Critical" status if the Idle CPU
 was greater than 99. The "Status Critical" message indicates that it worked.
-Note that **check_ganglia_metric** parses ranges and thresholds according to
-the `official Nagios plugin development guidelines
-<http://nagiosplug.sourceforge.net/developer-guidelines.html#THRESHOLDFORMAT>`_.
+Note that **check_ganglia_metric** uses `NagAconda <http://packages.python.org/NagAconda/>`_
+to parse ranges and thresholds according to the `official Nagios plugin
+development guidelines <http://nagiosplug.sourceforge.net/developer-guidelines.html#THRESHOLDFORMAT>`_.
 
 To see a complete list of command line options with brief explanations, run
 **check_ganglia_metric** with the ``--help`` option.
@@ -187,4 +187,4 @@ Known Issues
 Author
 -------
 
-Michael T. Conigliaro <mike [at] conigliaro [dot] org>
+Michael Paul Thomas Conigliaro <mike [at] conigliaro [dot] org>
